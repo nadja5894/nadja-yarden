@@ -247,7 +247,7 @@
                                 </div>
                             </div>
                             
-                            <p class="mb-0">המלווים והמלוות שלנו ילבשו Teal ו-Orange. נשמח מאוד אם תבחרו צבעים יפים אחרים לתלבושות שלכם, כדי שהם יוכלו לבלוט מעט ביום הזה.</p>
+                            <p class="mb-0 small"><strong>הערה קטנה לגבי הצבעים:</strong> הפלטה למעלה מציגה את קונספט העיצוב של החתונה שלנו. המלווים והמלוות שלנו ילבשו בהתאמה Teal ו-Orange. נשמח מאוד אם תבחרו צבעים יפים אחרים לתלבושות שלכם, כדי שהם יוכלו לבלוט מעט. אתם <strong>לא צריכים</strong> להתאים את הלבוש שלכם לצבעי העיצוב שלנו – נשמח לראות את שאר האורחים בשלל צבעים שמחים וצבעוניים!</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
     </div>
 </section>
         <!-- Services section-->
-        <section id="hotel">
+        <section id="hotel" class="bg-light">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-10">
@@ -315,7 +315,7 @@
     </div>
 </section>
         <!-- Services section-->
-        <section class="bg-light" id="questions">
+        <section id="questions">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-10">
@@ -436,14 +436,14 @@
     </div>
 </section>
         <!-- Contact section-->
-        <section id="contact">
+        <section id="contact" class="bg-light">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-10">
                 <h2 class="mb-4">צור קשר  </h2>
                 <p class="lead text-end">מכיוון שסביר להניח שיש לכם כבר את מספרי הטלפון שלנו, פשוט תכתבו לנו הודעה קצרה בווטסאפ או תתקשרו אלינו לכל שאלה כללית.</p>
                 
-                <div class="card border-0 shadow-sm mt-4 bg-light text-end">
+                <div class="card border-0 shadow-sm mt-4 text-end">
                     <div class="card-body p-4 p-md-5">
                         <h4 class="text-teal mb-3">עבור הפתעות, נאומים ומשחקים</h4>
                         <p>מכיוון שביום החתונה עצמו (וגם קצת לפניו) נהיה כנראה עסוקים למדי, ומכיוון שאנחנו גם מתים על הפתעות, אנא פנו ישירות למלווים (השושבינים) שלנו לכל תוכנית או תכנון סודיים:</p>
@@ -466,6 +466,81 @@
         </div>
     </div>
 </section>
+
+<!-- Countdown Sektion -->
+<!-- Countdown Sektion -->
+<section id="countdown" class="py-4 py-md-5" dir="rtl">
+    <div class="container px-2 px-md-4">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h3 class="mb-4" style="color: #16454F;">אנחנו כבר לא יכולים לחכות!</h3>
+                
+                <!-- Der Countdown Container mit flex-nowrap für Mobile UND dir="ltr" für korrekte Leserichtung der Zahlen -->
+                <div id="countdown-container" class="d-flex justify-content-center gap-2 gap-md-4 flex-nowrap" dir="ltr">
+                    
+                    <!-- Tage -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-days-he" class="fs-3 fw-bold" style="color: #DD4A21; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">ימים</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Stunden -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-hours-he" class="fs-3 fw-bold" style="color: #16454F; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">שעות</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Minuten -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-minutes-he" class="fs-3 fw-bold" style="color: #16454F; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">דקות</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Sekunden -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-seconds-he" class="fs-3 fw-bold" style="color: #2E6A75; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">שניות</small>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Das dazugehörige JavaScript für die hebräische Seite -->
+<script>
+    const countDownDateHe = new Date("Jun 19, 2027 13:30:00").getTime();
+
+    const countdownIntervalHe = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDateHe - now;
+
+        if (distance < 0) {
+            clearInterval(countdownIntervalHe);
+            document.getElementById("countdown-container").innerHTML = "<h4 class='mt-3' style='color: #DD4A21;'>היום זה היום הגדול שלנו!</h4>";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-days-he").innerText = days;
+        document.getElementById("cd-hours-he").innerText = hours;
+        document.getElementById("cd-minutes-he").innerText = minutes;
+        document.getElementById("cd-seconds-he").innerText = seconds;
+    }, 1000);
+</script>
 
 <section class="bg-light" id="photos">
     <div class="container px-4">

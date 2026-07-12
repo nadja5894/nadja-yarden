@@ -249,7 +249,7 @@
                                 </div>
                             </div>
                             
-                            <p class="mb-0">Unsere Trauzeuginnen und Trauzeugen werden Teal und Orange tragen. Wir würden uns sehr freuen, wenn ihr euch für eure Outfits andere schöne Farben aussucht, damit sie an diesem Tag optisch ein wenig herausstechen.</p>
+                            <p class="mb-0 small"><strong>Kleiner Hinweis zu den Farben:</strong> Die Palette oben zeigt das Konzept unserer Hochzeits-Deko. Unsere Trauzeuginnen und Trauzeugen werden passend dazu Teal und Orange tragen. Wir würden uns sehr freuen, wenn ihr euch für eure Outfits andere schöne Farben aussucht, damit sie optisch ein wenig herausstechen. Ihr müsst eure Outfits also <strong>nicht</strong> an unsere Deko-Farben anpassen – wir freuen uns über ein buntes und farbenfrohes Bild der restlichen Gäste!</p>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
     </div>
 </section>
         <!-- Services section-->
-      <section id="hotel">
+      <section id="hotel" class="bg-light">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-10">
@@ -314,7 +314,7 @@
         </div>
     </div>
 </section>
-       <section class="bg-light" id="questions">
+       <section id="questions">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-10">
@@ -433,14 +433,14 @@
     </div>
 </section>
         <!-- Contact section-->
-    <section id="contact">
+    <section id="contact" class="bg-light">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-10">
                 <h2 class="mb-4">Kontakt</h2>
                 <p class="lead">Da ihr höchstwahrscheinlich ohnehin unsere Handynummern habt, schreibt uns bei allgemeinen Fragen einfach kurz per WhatsApp oder ruft durch.</p>
                 
-                <div class="card border-0 shadow-sm mt-4 bg-light">
+                <div class="card border-0 shadow-sm mt-4">
                     <div class="card-body p-4 p-md-5">
                         <h4 class="text-teal mb-3">Für Überraschungen, Reden & Spiele</h4>
                         <p>Da wir am Hochzeitstag selbst (und davor) wahrscheinlich genug um die Ohren haben und uns außerdem wahnsinnig gerne überraschen lassen, wendet euch für geheime Pläne bitte direkt an unsere Trauzeugen:</p>
@@ -463,6 +463,81 @@
         </div>
     </div>
 </section>
+
+<!-- Countdown Sektion -->
+<!-- Countdown Sektion -->
+<section id="countdown" class="py-4 py-md-5">
+    <div class="container px-2 px-md-4">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h3 class="mb-4" style="color: #16454F;">Wir können es kaum erwarten!</h3>
+                
+                <!-- Der Countdown Container mit flex-nowrap für die mobile Ansicht -->
+                <div id="countdown-container" class="d-flex justify-content-center gap-2 gap-md-4 flex-nowrap">
+                    
+                    <!-- Tage -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-days" class="fs-3 fw-bold" style="color: #DD4A21; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">Tage</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Stunden -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-hours" class="fs-3 fw-bold" style="color: #16454F; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">Stunden</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Minuten -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-minutes" class="fs-3 fw-bold" style="color: #16454F; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">Minuten</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Sekunden -->
+                    <div class="card border-0 shadow-sm text-center" style="width: 75px; height: 75px; background-color: #FDFCF8;">
+                        <div class="card-body p-1 d-flex flex-column justify-content-center">
+                            <span id="cd-seconds" class="fs-3 fw-bold" style="color: #2E6A75; line-height: 1;">00</span>
+                            <small class="text-muted mt-1" style="font-size: 0.75rem;">Sekunden</small>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Das dazugehörige JavaScript -->
+<script>
+    const countDownDate = new Date("Jun 19, 2027 13:30:00").getTime();
+
+    const countdownInterval = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown-container").innerHTML = "<h4 class='mt-3' style='color: #DD4A21;'>Heute ist unser großer Tag!</h4>";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-days").innerText = days;
+        document.getElementById("cd-hours").innerText = hours;
+        document.getElementById("cd-minutes").innerText = minutes;
+        document.getElementById("cd-seconds").innerText = seconds;
+    }, 1000);
+</script>
 
 <section class="bg-light" id="photos">
     <div class="container px-4">
